@@ -1,0 +1,12 @@
+#surefire
+#Wed Dec 19 20:11:30 EST 2018
+jpda.address=51009
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+file.encoding=UTF-8
+jpda.listen=true
+forkMode=once
+user.dir=C\:\\Users\\sakim\\Documents\\bitbucket\\sarah-melvin-individual-work\\JDBCTComplexExampleStarter
+localRepository=C\:\\Users\\sakim\\.m2\\repository
+test=com.sg.jdbctcomplexexample.dao.RoomDaoDBTest
+basedir=C\:\\Users\\sakim\\Documents\\bitbucket\\sarah-melvin-individual-work\\JDBCTComplexExampleStarter
+maven.surefire.debug=-Xdebug -Xrunjdwp\:transport\=dt_socket,server\=n,address\=51009

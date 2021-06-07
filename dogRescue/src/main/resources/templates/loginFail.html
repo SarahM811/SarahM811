@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml"
+    >
+    <head>
+            <div th:replace="fragments/header :: header-css"/>
+
+        <title>Doggie Rescue</title>
+    </head>
+    <body>
+        <!-- Main Body of Page -->
+        <div class="container">
+                <div th:replace="fragments/header :: header"/>
+            <!-- different main content in different pages-->
+            
+                <center><h3 id="loginFail">Log In has failed- please check your user email and password</h3></center>
+
+                <a href="/login"><button type="button" id="tryagainbutton" class="btn btn-dark">Try Again</button></a>
+                <a href="/"><button type="button" id="gobackhomebutton" class="btn btn-dark">Go back to home</button></a>
+             
+            
+
+            <!--different main content end-->
+        </div>
+        <!--end of container div-->
+
+        <!-- End main body -->
+
+        <div th:replace="fragments/footer :: footer"/>
+    </body>
+</html>

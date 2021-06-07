@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/header :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+   <div th:replace="fragments/header :: header"/>
+      <!-- different main content in different pages-->
+      <div class="container">
+            
+        <div class="row m-4">
+            <div class="col text-center" id="dogdetailname"> 
+                    <h2 th:text="${dog.name}">Dog details</h2>
+            </div>
+        </div>
+<!--        <h2 th:text="'Dog Display: ' + ${dog.id}">Dog Display</h2>-->
+        <div class="row">
+          <div class="col-md-5">
+            <img th:src="${dog.imagepath}" width="300" height="300"/>
+          </div>
+          <div class="col-md-7">
+              <!-- <div class="row">
+                  <div class="col-md-2"><p>
+                      Name</p></div>
+                  <div class="col-md-4">
+                      <p id="name" th:text="${dog.name}">name</p>
+                  </div>
+              </div> -->
+              <div class="row">
+                  <div class="col-md-2"><p>
+                      Life Stage</p></div>
+                  <div class="col-md-4">
+                      <p id="lifestage" th:text="${dog.lifeStage.stage}">lifestage</p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-2"><p>
+                      Age</p></div>
+                  <div class="col-md-4">
+                      <p id="age" th:text="${dog.age}">age</p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-2"><p>
+                      Breed</p></div>
+                  <div class="col-md-4">
+                      <p id="breed" th:text="${dog.breed.name}">breed</p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-2"><p>
+                      Size</p></div>
+                  <div class="col-md-4">
+                      <p id="size" th:text="${dog.size.type}">size</p>
+                  </div>
+              </div>
+              <div class="row">
+                      <div class="col-md-2"><p>
+                          trainLevel</p></div>
+                      <div class="col-md-4">
+                          <p id="trainLevel" th:text="${dog.trainLevel.level}">trainLevel</p>
+                      </div>
+              </div>
+              <div class="row">
+                      <div class="col-md-2"><p>
+                          price</p></div>
+                      <div class="col-md-4">
+                          <p id="price" th:text="${dog.adoptionPrice}">price</p>
+                      </div>
+              </div>
+              <div class="row">
+                      <div class="col-md-2"><p>
+                          Description</p></div>
+                      <div class="col-md-4">
+                          <p id="description" th:text="${dog.description}">description</p>
+                      </div>
+                  </div>
+                  
+
+          </div>
+
+        </div>
+        <br>
+
+            <center><a href=# th:href="@{/detailContact(id=${dog.id})}" class="btn btn-info">Inquire about this pup</a></center></div><hr />
+
+
+      </div>
+        
+
+        
+      <!--different main content end-->
+    
+    
+      <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vending Machine</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/VendingMachine.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!--header of the page-->
+        <div class="row" id="pageBanner">
+            <h1>
+                Vending Machine
+            </h1>
+            <hr>
+          
+        </div>
+        <!--row div for the rest-->
+        <div class="row">
+            <div class="col-md-9" id="itemOptionsDiv">
+                <!--vending item list-->
+            </div>
+
+            <div class="col-md-3" id="formDiv">
+                <form class="form-horizontal" role="form">
+                    <!--total Money input-->
+                    <div class="form-group" id="totalMoneyInDiv">
+                        <label for="totalMoneyIn" class="col-md-12">
+                            <h2>Total $ In</h2>
+                        </label>
+                        <div class="col-md-offset-3 col-md-6">
+                            <input readonly type="text" class="form-control" id="moneyInput" placeholder="$0.00" /><br>
+                        </div>
+                        <div id="addMoneyButtonDiv">
+                            <div class="col-md-6">
+                                <button type="button" id="addDollar" class="btn btn-default">Add Dollar</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" id="addQuarter" class="btn btn-default">Add Quarter</button><br>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" id="addDime" class="btn btn-default">Add Dime</button><br>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" id="addNickel" class="btn btn-default">Add Nickel</button><br>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr />
+                    <!-- message Div-->
+                    <div class="form-group" id="messageDiv">
+                        <label for="messages" class="col-md-12">
+                            <h2 style="text-align:center">Messages</h2>
+                        </label>
+                        <div class="col-md-12">
+                            <input readonly type="text" class="form-control" id="messageBox" /><br>
+                        </div>
+                        <div id="selectedItemBox">
+                            <label for="selectedItem" class="col-md-3 control-label">
+                                <h4>Item:</h4>
+                            </label>
+                            <div class="col-md-9">
+                                <input readonly type="text" class="form-control" id="selectedItem" />
+                            </div>
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            <button type="button" id="makePurchaseButton" class="btn btn-default">
+                                Make Purchase
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <!-- change div-->
+                    <div class="form-group" id="changeDiv">
+                        <label for="change" class="col-md-12">
+                            <h2 style="text-align:center">Change</h2>
+                        </label>
+                        <div class="col-md-offset-2 col-md-8" style="text-align:center">
+                            <!-- <input readonly type="text" class="form-control" id="changeBox" /><br> -->
+                            <textarea readonly class="form-control" id="changeBox"></textarea><br>
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                                <button type="button" id="changeReturnButton" class="btn btn-default">
+                                    Change Return
+                                </button>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

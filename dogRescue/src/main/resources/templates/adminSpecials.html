@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Events</h2>
+        <hr />
+        <form type="form" action="addSpecial" method="POST" th:object="${special}">
+          <div id="eventsDiv">
+              <div class="row">
+                  <div class="col-md-3"><h4>Title</h4></div>
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="title"
+                      id="titleInputDiv"
+                      th:field="*{title}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3"><h4>Description</h4></div>
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="description"
+                      id="descriptionInputDiv"
+                      th:field="*{Description}"
+                    />
+                  </div>
+                </div>
+
+          </div>
+          
+          
+            <center>
+                <button class="btn" type="submit" id="saveSpecialButton">
+                    Save
+                  </button>
+            </center>
+         
+        </form>
+      </div>
+        <br>
+     
+     
+      <hr />
+      <!-- breed table-->
+      <div id="specialsDiv">
+        
+        <div id="dataDiv" th:each="special : ${specials}">
+          <div class="row">
+            <div class="col-md-4"> <p th:text="${special.title}">Title</p></div>
+            <div class="col-md-6">
+                
+                    <p th:text="${special.description}">description</p>
+               
+             
+            </div>
+            <button type="button" id="deleteButton" class="btn btn-delete mx-auto"><a href="#" th:href="@{deleteSpecial(id=${special.id})}">Delete</a></button>
+          </div>
+          <br>
+        </div>
+        <hr />
+      </div>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

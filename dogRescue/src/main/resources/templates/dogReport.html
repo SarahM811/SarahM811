@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Dog Inventory Report</h2>
+        <hr />
+
+        <hr />
+      </div>
+      <!-- dog Inventory table-->
+      <div id="dogInventoryDiv">
+        <table id="puppyTable" class="table table-hover">
+          <label>Puppy Inventory</label>
+          <thead>
+            <tr>
+              <th width="17%">Name</th>
+              <th width="17%">Breed</th>
+              <th width="17%">Age</th>
+              <th width="17%">Size</th>
+              <th width="17%">Train Level</th>
+            </tr>
+          </thead>
+          <tr class="dataRow" th:each="puppy : ${puppies}">
+            <td width="17%" th:text="${puppy.name}">Name</td>
+            <td width="17%" th:text="${puppy.breed.Name}">Breed</td>
+            <td width="17%" th:text="${puppy.age}">age</td>
+            <td width="17%" th:text="${puppy.size.type}">size</td>
+            <td width="17%" th:text="${puppy.trainLevel.level}">trainlevel</td>
+          </tr>
+        </table>
+
+        <table id="youngTable" class="table table-hover">
+          <label>Young Adult Inventory</label>
+          <thead>
+            <tr>
+              <th width="17%">Name</th>
+              <th width="17%">Breed</th>
+              <th width="17%">Age</th>
+              <th width="17%">Size</th>
+              <th width="17%">Train Level</th>
+            </tr>
+          </thead>
+          <tr class="dataRow" th:each="young : ${youngsters}">
+            <td width="17%" th:text="${young.name}">Name</td>
+            <td width="17%" th:text="${young.breed.Name}">Breed</td>
+            <td width="17%" th:text="${young.age}">age</td>
+            <td width="17%" th:text="${young.size.type}">size</td>
+            <td width="17%" th:text="${young.trainLevel.level}">trainlevel</td>
+          </tr>
+        </table>
+
+        <table id="adultTable" class="table table-hover">
+          <label>Adult Inventory</label>
+          <thead>
+            <tr>
+              <th width="17%">Name</th>
+              <th width="17%">Breed</th>
+              <th width="17%">Age</th>
+              <th width="17%">Size</th>
+              <th width="17%">Train Level</th>
+            </tr>
+          </thead>
+          <tr class="dataRow" th:each="adult : ${adults}">
+            <td width="17%" th:text="${adult.name}">Name</td>
+            <td width="17%" th:text="${adult.breed.Name}">Breed</td>
+            <td width="17%" th:text="${adult.age}">age</td>
+            <td width="17%" th:text="${adult.size.type}">size</td>
+            <td width="17%" th:text="${adult.trainLevel.level}">trainlevel</td>
+          </tr>
+        </table>
+        <table id="seniorTable" class="table table-hover">
+                <label>Senior Inventory</label>
+                <thead>
+                  <tr>
+                    <th width="17%">Name</th>
+                    <th width="17%">Breed</th>
+                    <th width="17%">Age</th>
+                    <th width="17%">Size</th>
+                    <th width="17%">Train Level</th>
+                  </tr>
+                </thead>
+                <tr class="dataRow" th:each="senior : ${seniors}">
+                  <td width="17%" th:text="${senior.name}">Name</td>
+                  <td width="17%" th:text="${senior.breed.Name}">Breed</td>
+                  <td width="17%" th:text="${senior.age}">age</td>
+                  <td width="17%" th:text="${senior.size.type}">size</td>
+                  <td width="17%" th:text="${senior.trainLevel.level}">trainlevel</td>
+                </tr>
+              </table>
+             
+      </div>
+      <a href="/report"><button type="button" id="backButton" class="btn">Back</button></a>
+      <br>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

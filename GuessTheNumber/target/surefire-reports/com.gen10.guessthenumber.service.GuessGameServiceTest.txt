@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gen10.guessthenumber.service.GuessGameServiceTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.01 s - in com.gen10.guessthenumber.service.GuessGameServiceTest

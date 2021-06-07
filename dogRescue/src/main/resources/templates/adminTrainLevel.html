@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Train Level</h2>
+       <hr />
+        <form type="form" action="addTrainLevel" method="POST" th:object="${trainlevel}">
+          <div id="breedDiv" class="row">
+            <div class="col-md-3"><h4>new train level</h4></div>
+            <div class="col-md-6">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="TrainLevel"
+                id="trainlevelInputDiv"
+                th:field="*{level}"
+              />
+            </div>
+            <div class="col-md-3"><button class="btn" type="submit" id="saveTrainLevelButton">Save</button></div>
+            
+          </div>
+        </form>
+        <hr />
+      </div>
+      <!-- breed table-->
+      <div id="tlTableDiv">
+            <table id="tlTable" class="table table-hover">
+                <thead>
+                <tr>
+                    <th width="17%">Level</th>
+                    <th width="17%">Added Date</th>
+                    <th width="17%">User</th>
+                   
+                </tr>
+                </thead>
+                <tr class="dataRow" th:each="trainlevel : ${trainlevels}">
+                    <!-- <td width="17%" th:text="${object.id}">Item ID</td> -->
+                    <td width="17%" th:text="${trainlevel.level}">Level</td>
+                    <td width="17%" th:text="${trainlevel.date}">Added Date</td>
+                    <td width="17%" th:text="${trainlevel.user.email}">User</td>
+                    
+                </tr>
+                <!--
+                       #3: This holds the list of contacts - we will add rows
+                      dynamically
+                       using jQuery
+                -->
+            </table>
+        </div>
+     
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

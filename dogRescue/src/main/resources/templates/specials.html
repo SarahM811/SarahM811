@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/header :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/header :: header"/>
+        
+     
+      <!-- different main content in different pages-->
+      <div clss="container" id="specialsDiv">
+        <h2>Events</h2>
+        <hr />
+        <img src="/images/eventsBanner.jpg" width="1100" height="500"/>
+        
+          <div id="specialsDiv">
+            <div id="dataDiv">
+                                          
+                  <div th:each="special: ${specials}" class="row">
+                    <div class="col-md-5"><h3 th:text="${special.title}">Special Title</h3></div>
+                    <div class="col-md-7">
+                        <h3 th:text="${special.description}">special description</h3>
+                    </div>
+                    <hr />      
+                  </div>  
+                  <hr />             
+              
+            </div>
+          </div>
+        
+      </div>
+      <br>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+  <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

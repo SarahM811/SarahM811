@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+   <bean id="userIO" class="com.gen10.flooringmastery.view.UserIOConsoleImpl" />
+<!--   <bean id="dao" class="com.gen10.flooringmastery.dao.FlooringMasteryDaoFileImpl" />-->
+   <bean id="daoStub" class="com.gen10.flooringmastery.dao.FlooringMasteryDaoStubFile" />
+   <bean id="view" class="com.gen10.flooringmastery.view.FlooringMasteryView">
+       <constructor-arg ref="userIO" />
+   </bean>
+   <bean id="productDao" class="com.gen10.flooringmastery.dao.ProductDaoFile" />
+   <bean id="taxDao" class="com.gen10.flooringmastery.dao.TaxDaoFile" />
+   <bean id="auditDao" class="com.gen10.flooringmastery.dao.FlooringMasteryAuditDaoFile" />
+   <bean id="service" class="com.gen10.flooringmastery.service.FlooringMasteryServiceLayerFileImpl">
+       <constructor-arg ref="daoStub" />
+       <constructor-arg ref="productDao" />
+       <constructor-arg ref="taxDao" />
+       <constructor-arg ref="auditDao" />
+   </bean>
+      
+</beans>
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Entry Manager</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div class="row m-4">
+            <div class="col text-center border border-dark">
+                <h1>Entry Manager</h1>
+            </div>
+        </div>
+        <h2 th:text="'Entry Display: ' + ${object.id}">Entry Display</h2>
+        <div class="row">
+            <div class="col-md-2"><p>
+                Property 1</p></div>
+            <div class="col-md-4">
+                <p id="property1value" th:text="${object.property1}">property1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><p>
+                Property 2</p></div>
+            <div class="col-md-4">
+                <p id="property2value" th:text="${object.property2}">property2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><p>
+                Property 3</p></div>
+            <div class="col-md-4">
+                <p id="property3value" th:text="${object.property3}">property3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><p>
+                Property 4</p></div>
+            <div class="col-md-4">
+                <p id="property4value" th:text="${object.property4}">property4</p>
+            </div>
+        </div>
+        <div class="row">
+        <div class="row col-md-2">
+            <a href="/"><button type="button" id="homeButton" class="btn btn-success mx-auto">Home</button></a>
+        </div>
+        <div class="row col-md-2">
+            <a th:href="@{edit(id=${object.id})}"><button type="button" id="editButton" class="btn btn-success mx-auto">Edit</button></a>
+        </div>
+        <div class="row col-md-2">
+            <a th:href="@{delete(id=${object.id})}"><button type="button" id="deleteButton" class="btn btn-success mx-auto">Delete</button></a>
+        </div>
+        
+    </div>
+      
+    <!-- End main body -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

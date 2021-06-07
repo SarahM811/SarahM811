@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header-css"/>
+
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Edit a User</h2>
+        <hr />
+      </div>
+      <form type="form" action="editUser" method="POST" th:object="${user}">
+        <div class="row">
+          <div class="col-md-2"><p>First Name</p></div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              name="firstname"
+              placeholder="enter first name"
+              th:value="${firstname}"
+              th:field="*{firstname}"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Last Name</p></div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              id="lastname"
+              name="lastname"
+              placeholder="enter last name"
+              th:value="${lastname}"
+              th:field="*{lastname}"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Email</p></div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="enter email"
+              th:value="${email}"
+              th:field="*{email}"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Role: </label>
+          <select
+            name="roleId"
+            class="form-control"
+            id="roleSelect"
+            th:field="*{role}"
+          >
+            <option
+              th:each="role : ${roles}"
+              th:value="${role.id}"
+              th:text="${role.roletype}"
+            >
+              Role
+            </option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"><p>Password</p></div>
+          <div class="col-md-4">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="enter password"
+             
+              th:field="*{password}"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-2"><p>Confirm Password</p></div>
+                <div class="col-md-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmpassword"
+                    name="confirmpassword"
+                    placeholder="enter password"
+                    
+                  />
+                </div>
+              </div>
+
+        <input type="hidden" th:value="${user.id}" th:field="*{id}" />
+        <a href="/user"
+          ><button
+            type="button"
+            id="cancelButton"
+            class="btn btn-success mx-auto"
+          >
+            Cancel
+          </button></a
+        >
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

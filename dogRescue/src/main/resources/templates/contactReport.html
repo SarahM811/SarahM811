@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Contacts Report</h2>
+        <hr />
+
+        <hr />
+      </div>
+      <!-- dog Inventory table-->
+      <div id="dogInventoryDiv">
+        <table id="puppyTable" class="table table-hover">
+          <label>Contact History</label>
+          <thead>
+            <tr>
+              <th width="17%">Name</th>
+              <th width="17%">Email</th>
+              <th width="17%">Phone</th>
+              <th width="17%">Message</th>
+              <th width="17%">Inquired dog name</th>
+            </tr>
+          </thead>
+          <tr class="dataRow" th:each="contact : ${contacts}">
+            <td width="17%" th:text="${contact.name}">Name</td>
+            <td width="17%" th:text="${contact.email}">email</td>
+            <td width="17%" th:text="${contact.phone}">phone</td>
+            <td width="17%" th:text="${contact.message}">message</td>
+            <td width="17%" th:text="${contact.dogname}">dogname</td>
+          </tr>
+        </table>
+
+        <a href="/report"><button type="button" id="backButton" class="btn">Back</button></a>
+      </div>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

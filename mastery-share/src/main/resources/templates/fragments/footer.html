@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+<div th:fragment="footer">
+
+    <div class="container">
+
+        <footer>
+        <!-- this is footer -->
+        GEN 10 BABY!!
+            <span sec:authorize="isAuthenticated()">
+                | Logged user: <span sec:authentication="name"></span> |
+                Roles: <span sec:authentication="principal.authorities"></span> |
+                <a th:href="@{/logout}">Sign Out</a>
+            </span>
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"
+        ></script>
+        <script src="/js/home.js"></script>
+
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>

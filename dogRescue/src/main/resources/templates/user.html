@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - User</h2>
+       <hr />
+       <a href="/addUser"><h3>Add a user</h3></a>
+        <hr />
+      </div>
+    
+      <div id="userTableDiv">
+            <table id="tlTable" class="table table-hover">
+                <thead>
+                <tr>
+                    <th width="17%">First Name</th>
+                    <th width="17%">Last Name</th>
+                    <th width="17%">Email</th>
+                    <th width="17%">Role</th>
+                    <th width="17%"></th>
+                   
+                </tr>
+                </thead>
+                <tr class="dataRow" th:each="user : ${users}">
+                    <td width="17%" th:text="${user.firstname}">First Name</td>
+                    <td width="17%" th:text="${user.lastname}">Last Name</td>
+                    <td width="17%" th:text="${user.email}">Email</td>
+                    <td width="17%" th:text="${user.role.roletype}">Role</td>
+                    <td><a th:href="@{editUser(id=${user.id})}">Edit</a></td>>
+                    
+                </tr>
+               
+            </table>
+        </div>
+     
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

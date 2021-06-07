@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      
+     
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Dog</h2>
+        <hr />
+        <a href="/addDog"><h3>Add a dog</h3></a>
+        <form type="form" action="#">
+          <div id="searchDiv" >
+           
+              <h3>Quick Search</h3>
+              <br>
+              <div class="row">
+              <div class="col-md-6" >
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Breed or Name"
+                id="userinputDiv"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-3">
+              <label>Life Stage: </label>
+            </div>
+            <div class="col-md-9">
+              <select
+                name="lifestageId"
+                class="form-control"
+                id="lifestageSelect"
+              >
+                <option value= 0>LifeStage</option>
+                <option
+                  th:each="lifeStage : ${lifeStages}"
+                  th:value="${lifeStage.id}"
+                  th:text="${lifeStage.stage}"
+                >
+                  lifeStage
+                </option>
+              </select>
+            </div>
+            </div>
+            </div>
+          </div>
+          <br>
+          <center><button class="btn" type="submit" id="AdminSearchButton">Search</button></center>
+        </div>
+        </form>
+      </div>
+
+      <div id="AdminSearchResultContent" style="display: none">
+        <div class="row"><h2>Search results</h2></div>
+        <br>
+
+        <div class="row">
+          <div id="AdminSearchResultDiv">
+          
+          </div>
+        </div>
+      </div>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

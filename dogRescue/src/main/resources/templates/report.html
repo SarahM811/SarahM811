@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="reportDiv">
+        <h2>Admin - Reports</h2>
+        <hr />
+        <a href="/adoptionReport"><p>Adoption Report</p></a>
+        <a href="/dogReport"><p>Dog Inventory Report</p></a>
+        <a href="/contactReport"><p>Contact Report</p></a>
+      </div>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

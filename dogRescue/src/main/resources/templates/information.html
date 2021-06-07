@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/header :: header-css"/>
+    
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+    <div th:replace="fragments/header :: header"/>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="1200" height="600">
+      <source src="/images/Puppiness.mp4" type="video/mp4" >
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-black" id="infoTextDiv">
+          <h2 class="display-3">Things you need to know before adopting a pup</h2>
+          <p class="lead mb-0">Getting a pup is exciting! However, before you jump in your car and adopt a puppy, there are 
+              lot of things you would like to consider. &nbsp;
+            
+          </p>
+          <br>
+        
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1393460289609" id="page-52fedabee4b03a0d7ddc2ec1">
+            <div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="row sqs-row"><div class="col sqs-col-6 span-6">
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-null"><div class="sqs-block-content">
+                <p>First, finance. Dog is a lifetime companion. They will be loyal and always by your side until their last day. They will need bowls, 
+                        they need to eat, and they might need a bed as well! They also need preventative medications which can be costly.&nbsp;
+    
+                        They might get sick, just like humans. Dogs also need to be regularly checked for their health and vaccinations. Please 
+                        take that into consideration.</p></div></div></div>
+                  <div class="col sqs-col-6 span-6"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-dc95820888181910746b">
+                    <div class="sqs-block-content"><p>
+                            Second, training. Every dog has a different personality and different traits. Some dogs can be toy possessive and some 
+                            can be territorial. However, that does not make them bad dogs. Any dogs can be trained. It will require patience 
+                            and some might require a professional training. You may need to teach your dogs certain behaviors and attitudes.</p>
+                    </div></div><div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-6e80c190f3ec448e6600"><div class="sqs-block-content">
+  <div class="sqs-block-button-container--center" data-alignment="center" data-button-size="small">
+
+  </div></div></div></div></div></div></div></div>
+    </div>
+
+    </div>
+
+
+    <div th:replace="fragments/footer :: footer"/>
+  
+  </body>
+</html>

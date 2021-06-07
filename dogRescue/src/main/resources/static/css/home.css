@@ -1,0 +1,263 @@
+body {
+  background-color: #d2d2d2;
+}
+
+.image-container {
+  position: relative;
+}
+/* 
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-wrapper {
+  width: 100%;
+  /* margin: 4% 10% 5% 10%; */
+}
+
+.content-wrapper img {
+  width: 100%;
+  height: 50%;
+}
+
+.text-wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: -40%;
+}
+
+.text-wrapper h1,
+h2 {
+  text-align: center;
+  color: rgb(243, 234, 234);
+  font-family: "lobster", cursive;
+}
+
+/* #cardwrapper {
+    display:flex;
+} */
+
+.clash-card {
+  /* perspective: 500px; */
+  /* margin: 20%;
+    padding: 4%;  */
+  /* grid-column-gap: 200px;
+    grid-row: 200px; */
+  background: white;
+  width: 300px;
+  display: inline-block;
+  /* margin: auto; */
+  margin: 3%;
+  /* border-radius: $border-radius-size + 5; */
+  border-radius: 10px;
+  /* position: relative; */
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  font-family: "lobster", cursive;
+}
+
+.clash-card__image {
+  position: relative;
+ 
+  border-top-right-radius: 10px;
+  
+  margin-bottom: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ 
+}
+
+/* .clash-card__image--barbarian {
+  
+  img {
+      width: 400px;
+      position: absolute;    
+      top: -65px;
+      left: -70px;
+    }
+} */
+
+#navbarSupportedContent ul {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+  color: #eeeeeede;
+}
+
+.glyphicon {
+  font-size: 18px;
+}
+
+.title-desc-inner {
+  font-family: "lobster", cursive;
+}
+
+#searchDivBox h2,
+h3,
+label {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#searchResultContent h2,
+label {
+  font-family: "Poppins", sans-serif;
+}
+
+.container h2,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+#searchDiv {
+  padding: 4%;
+  border: 5px solid grey;
+}
+
+
+
+#contactDiv {
+  display: block;
+  text-align: center;
+}
+ #contactForm input,textarea {
+  display: inline-block;
+ 
+  
+ 
+  /* margin-right: auto; 
+  text-align: left; 
+   text-align: center;
+  width: 250px; */
+} 
+
+#contactForm textarea {
+  display: inline-block;
+ 
+  
+ 
+  /* margin-right: auto; 
+  text-align: left; 
+   text-align: center;
+  width: 250px; */
+} 
+
+#specialsDiv h2 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#contactContainer h2{
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#searchResultContent h2{
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#dogdetailname h2 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#map {
+  text-align: center;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+#infoTextDiv h2{
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#detailContactus {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#adoptionReportResultContent h2{
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+button {
+  margin: 4%;
+  font-size: 7;
+  box-shadow: 6px 8px rgb(40, 90, 241); 
+}
+
+#loginbanner {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+#tryagainbutton {
+  display: inline-block;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #d2d2d2;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+

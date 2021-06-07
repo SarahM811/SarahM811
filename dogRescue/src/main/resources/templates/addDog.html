@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Add a Dog</h2>
+
+        <form type="form" action="addDog" method="POST" th:object="${dog}" enctype="multipart/form-data">
+            <!--th:object="${dog}"-->
+          <div class="row">
+            <div class="col-md-2"><p>Dog Name</p></div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="enter dog name"
+                th:field="*{name}"
+               
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><p>Age</p></div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="age"
+                name="age"
+                placeholder="enter dog age"
+                th:field="*{age}"
+               
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Breed: </label>
+            <select class="form-control" id="breedSelect"   th:field="*{breed}" >
+                <!--th:field="*{breed}"-->
+              <option
+                th:each="breed : ${breeds}"
+                th:value="${breed.id}"
+                th:text="${breed.name}"
+               
+              >
+              <!-- th:selected="${breed == dog.breed}"-->
+                Breed
+                <!-- <input type="hidden" th:value="${breed.toJson()}" id="${'breedJson_'+ breed.id}" /> -->
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Size: </label>
+            <select name="sizeId" class="form-control" id="sizeSelect" th:field="*{size}"  >
+              <option
+                th:each="size : ${sizes}"
+                th:value="${size.id}"
+                th:text="${size.type}"
+              >
+                Size
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Life Stage: </label>
+            <select
+              
+              class="form-control"
+              id="lifestageSelect"
+              th:field="*{lifeStage}"
+            >
+            <!--th:field="*{lifestage}"-->
+              <option
+                th:each="lifestage : ${lifestages}"
+                th:value="${lifestage.id}"
+                th:text="${lifestage.stage}"
+              >
+                LifeStage
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Train Level: </label>
+            <select
+              name="trainlevelId"
+              class="form-control"
+              id="trainlevelSelect"
+              th:field="*{trainLevel}"
+            >
+            <!-- th:field="*{trainlevel}"-->
+              <option
+                th:each="trainlevel : ${trainlevels}"
+                th:value="${trainlevel.id}"
+                th:text="${trainlevel.level}"
+              >
+                TrainLevel
+              </option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><p>Adoption Fee</p></div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="adoptionPrice"
+                name="adoptionPrice"
+                placeholder="enter adoption fee"
+              
+               
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><p>Description</p></div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                name="description"
+                placeholder="enter dog description"
+              
+              
+              />
+              <br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><p>Featured</p></div>
+            <div class="col-md-4" >
+                
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="true"
+                name="featured"
+                th:value="${dog.featured}"
+                th:field="*{featured}"
+               
+               
+              /><br />
+             
+            </div>
+          </div>
+          <div class="row">
+                <div class="col-md-2"><p>Available</p></div>
+                <div class="col-md-4">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="true"
+                    name="available"
+                    th:value="${isavailable}"
+                    th:field="*{isavailable}"
+                  
+                  /><br />
+                  
+                </div>
+              </div>
+              <div class="row">
+                  <input type="file" name="image"/>
+                  <br>
+              </div>
+              <br>
+             
+
+              <input type="hidden" th:value="${dog.id}" th:field="*{id}"/>
+              <a href="/adminDogs"><button type="button" id="deleteButton" class="btn btn-success mx-auto">Cancel</button></a>
+              <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

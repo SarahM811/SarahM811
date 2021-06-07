@@ -1,0 +1,2 @@
+2018-11-27T15:28:32.657 : addMovie: cococom.gen10.week2_assignment_moviedatabase.dto.Movie@147ed70f
+2018-11-27T15:28:48.375 : addMovie: coco 2com.gen10.week2_assignment_moviedatabase.dto.Movie@61dd025

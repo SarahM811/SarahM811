@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerAdmin :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerAdmin :: header"/>
+      <!-- different main content in different pages-->
+      <div id="searchDivBox">
+        <h2>Admin - Dog</h2>
+        <h3>Adoption Report</h3>
+        <hr />
+        <form type="form" action="#">
+         
+          <br />
+          <div id="searchDiv">
+             <div class="row">
+                <h4>Filter</h4>
+             </div> 
+            <div class="row">
+              <div class="col-md-6">
+                <label>user</label>
+                <select name="userId" class="form-control" id="userSelect">
+                  <option value="0">All Users</option>
+                  <option
+                    th:each="user : ${users}"
+                    th:value="${user.id}"
+                    th:text="${user.email}"
+                  >
+                    User
+                  </option>
+                </select>
+              </div>
+
+              <div class="col-md-3">
+                <label>From Date: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fromDate"
+                  name="fromDate"
+                  placeholder="enter from date"
+                />
+              </div>
+              <div class="col-md-3">
+                <label>To Date: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="toDate"
+                  name="toDate"
+                  placeholder="enter to date"
+                />
+              </div>
+            </div>
+            <br>
+          <center>
+              <button class="btn" id="adoptionReportSearchButton">
+                  Search
+                </button>
+              </center>
+          </div>
+          
+        </form>
+      </div>
+
+      <div id="adoptionReportResultContent"  style="display: none">
+          <!--style="display: none"-->
+        <h2>Search results</h2>
+        <br>
+        <div class="row">
+          <table id="adoptionTable" class="table table-hover" width="400px">
+            <thead>
+              <tr>
+                <th width="20%">Adoption ID</th>
+                <th width="20%">User</th>
+                <th width="20%">Dog Name</th>
+                <th width="20%">Adoption Date</th>
+              </tr>
+            </thead>
+            <tbody id="adoptionReportContentRow"></tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <a href="/report"><button type="button" id="backButton" class="btn">Back</button></a>
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  </body>
+</html>

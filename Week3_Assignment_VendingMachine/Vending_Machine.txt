@@ -1,0 +1,4 @@
+Snickers::1.25::10
+Milkyway::1.5::0
+Sunchips::1.40::7
+Doritos::1.75::5

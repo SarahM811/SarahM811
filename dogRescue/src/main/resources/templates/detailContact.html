@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/header :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+       
+        <div th:replace="fragments/header :: header"/>
+              <!-- different main content in different pages-->
+      <div clss="container">
+        <center><h2 id="detailContactus">Contact Us</h2></center>
+        <div id="contactDiv" class="form">
+          <form
+            id="contactForm"
+            type="form"
+            action="addDetailContact"
+            method="POST"
+            th:object="${contact}"
+          >
+            <div class="form-group">
+              <label class="col-4" for="contactName">Name</label>
+              <input
+                type="text"
+                class="col-8 form-control"
+                id="contactName"
+                th:field="*{name}"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('name')}">
+                  <p th:each="error : ${#fields.errors('name')}" 
+                     class="alert alert-danger" th:text="${error}"> Bad name </p>
+              </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="contactEmail">Email</label>
+              <input
+                type="text"
+                class="col-8 form-control"
+                id="contactEmail"
+                th:field="*{email}"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('email')}">
+                  <p th:each="error : ${#fields.errors('email')}" 
+                     class="alert alert-danger" th:text="${error}"> Bad email </p>
+              </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="contactPhone">Phone</label>
+              <input
+                type="number"
+                class="col-8 form-control"
+                id="contactPhone"
+                th:field="*{phone}"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('phone')}">
+                  <p th:each="error : ${#fields.errors('phone')}" 
+                     class="alert alert-danger" th:text="${error}"> Bad phone </p>
+              </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="contactMessage">Message</label>
+              <textarea
+                type="textarea"
+                class="col-8 form-control"
+                id="contactMessage"
+                th:field="*{message}"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="dogname">Dog Name</label>
+              <input
+                type="text"
+                class="col-8 form-control"
+                th:value="${dog.name}"
+                name="dogname"
+              />
+            </div>
+            <!-- <input type="hidden" name="dogId" th:value="${dog.id}" /> -->
+            <!-- <input type="hidden" th:value="${dog.id}"/> -->
+            <!-- <input type="text" name="dogId" th:value="${dog.name}" /> -->
+            <center>
+                <button type="submit" class="btn btn-primary">Contact</button>
+            </center>
+          </form>
+        </div>
+      </div>
+
+      <!--different main content end-->
+    </div>
+    <!--end of container div-->
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+    </body>
+</html>

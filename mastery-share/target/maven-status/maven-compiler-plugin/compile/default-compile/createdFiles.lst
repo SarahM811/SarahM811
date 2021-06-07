@@ -1,0 +1,7 @@
+com\sg\shared\config\SpringSecurityConfig.class
+com\sg\shared\error\MyAccessDeniedHandler.class
+com\sg\shared\service\ServiceLayer.class
+com\sg\shared\SharedApp.class
+com\sg\shared\repositories\ObjectRepository.class
+com\sg\shared\controller\MainController.class
+com\sg\shared\entities\OurObject.class

@@ -1,0 +1,5 @@
+com\gen10\springbootrestservice\models\ToDo.class
+com\gen10\springbootrestservice\App.class
+com\gen10\springbootrestservice\data\ToDoInMemoryDao.class
+resources.class
+com\gen10\springbootrestservice\data\ToDoDao.class

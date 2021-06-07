@@ -1,0 +1,111 @@
+2018-11-27T15:45:19.177 : Inventory of com.gen10.week3.vendingmachine.dto.Inventory@55f96302 is updated.
+2018-11-27T15:45:54.460 : Inventory of com.gen10.week3.vendingmachine.dto.Inventory@55f96302 is updated.
+2018-11-27T15:51:26.088 : Inventory of com.gen10.week3.vendingmachine.dto.Inventory@55f96302 is updated.
+2018-11-27T15:51:40.618 : Chosen item is out of stock
+2018-11-27T15:55:24.700 : Snickers is out of stock
+2018-11-27T15:57:00.612 : Snickers is out of stock
+2018-11-27T15:57:04.952 : Snickers is out of stock
+2018-11-27T15:57:06.270 : Milkyway is successfully dispensed to the customer
+2018-11-27T15:57:09.015 : Milkyway is successfully dispensed to the customer
+2018-11-27T15:57:09.018 : 1 is insufficient amount of fund.
+2018-11-27T15:57:25.840 : Milkyway is successfully dispensed to the customer
+2018-11-27T15:57:25.844 : 1 is insufficient amount of fund.
+2018-11-27T15:57:48.253 : Milkyway is successfully dispensed to the customer
+2018-11-27T15:57:48.295 : 1 is insufficient amount of fund.
+2018-11-27T15:57:51.599 : Snickers is out of stock
+2018-11-27T15:57:53.438 : Milkyway is successfully dispensed to the customer
+2018-11-27T18:27:26.120 : Snickers is out of stock
+2018-11-27T18:28:56.076 : Snickers is out of stock
+2018-11-27T18:29:15.743 : Snickers is out of stock
+2018-11-27T18:30:04.503 : Snickers is successfully dispensed to the customer
+2018-11-27T18:30:44.949 : Snickers is successfully dispensed to the customer
+2018-11-27T18:31:04.474 : Snickers is successfully dispensed to the customer
+2018-11-27T18:39:34.990 : Snickers is successfully dispensed to the customer
+2018-11-27T18:41:52.605 : Snickers is successfully dispensed to the customer
+2018-11-27T18:42:00.066 : Snickers is successfully dispensed to the customer
+2018-11-27T18:42:10.227 : Snickers is successfully dispensed to the customer
+2018-11-27T18:44:50.906 : Snickers is successfully dispensed to the customer
+2018-11-27T18:46:42.852 : Snickers is successfully dispensed to the customer
+2018-11-27T18:48:34.129 : Snickers is successfully dispensed to the customer
+2018-11-27T20:16:41.732 : chooseItem: 2
+2018-11-27T20:16:41.785 : validateMoney: 1Item: Milkyway |Price: 1.5  |Inventory count: 4
+2018-11-27T20:42:59.734 : chooseItem: 1
+2018-11-28T09:31:48.588 : chooseItem: 1
+2018-11-28T09:31:48.632 : validateMoney| Error: InsufficientFundsException1 Item: Snickers |Price: 1.25  |Inventory count: 7
+2018-11-28T09:36:52.537 : chooseItem: 1
+2018-11-28T09:36:52.576 : validateMoney| Error: InsufficientFundsException1 Item: Snickers |Price: 1.25  |Inventory count: 7
+2018-11-28T09:52:49.608 : chooseItem: 2
+2018-11-28T09:52:49.653 : validateMoney| Error: InsufficientFundsException| user money: 1 Item: Milkyway |Price: 1.5  |Inventory count: 4
+2018-11-28T09:52:51.190 : chooseItem| Error: OutOfStockException | 1
+2018-11-28T09:55:45.223 : chooseItem| Error: OutOfStockException | 1
+2018-11-28T09:56:02.688 : chooseItem: 2
+2018-11-28T09:59:15.057 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T09:59:19.963 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-28T09:59:19.965 : validateMoney| Error: InsufficientFundsException| user money: 1 Item: Doritos |Price: 1.75  |Inventory count: 6
+2018-11-28T09:59:22.976 : chooseItem| Error: OutOfStockException | user Choice: 1
+2018-11-28T09:59:33.315 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T13:19:21.973 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-28T13:19:22.012 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 10
+2018-11-28T13:19:24.976 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T13:19:26.743 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T13:19:32.720 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T13:19:32.722 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Milkyway |Price: 1.5  |Inventory count: 1
+2018-11-28T13:20:36.540 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-28T13:20:38.727 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T13:20:40.899 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-28T13:21:02.985 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-28T13:21:05.707 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T14:06:43.667 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-28T14:06:43.708 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Milkyway |Price: 1.5  |Inventory count: 10
+2018-11-28T14:06:45.116 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-28T14:06:45.117 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 9
+2018-11-28T14:06:47.618 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-28T14:06:47.621 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Doritos |Price: 1.75  |Inventory count: 6
+2018-11-28T14:07:06.824 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-29T10:00:26.506 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-29T10:00:28.922 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-29T10:44:59.457 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-29T10:44:59.496 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Milkyway |Price: 1.5  |Inventory count: 10
+2018-11-29T10:45:08.376 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-11-29T10:45:08.379 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 6
+2018-11-29T10:50:15.514 : chooseItem| Error: OutOfStockException| user money: $1
+2018-11-29T10:50:20.323 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-29T10:50:20.326 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Doritos |Price: 1.75  |Inventory count: 6
+2018-11-29T10:50:25.043 : chooseItem| Error: OutOfStockException| user money: $1
+2018-11-29T10:55:14.049 : chooseItem| Error: OutOfStockException | user choice: 1
+2018-11-29T10:55:15.446 : chooseItem| Error: OutOfStockException | user choice: 1
+2018-11-29T10:55:16.550 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-29T10:55:24.178 : chooseItem| Error: OutOfStockException | user choice: 1
+2018-11-29T10:55:28.295 : chooseItem| Error: OutOfStockException | user choice: 1
+2018-11-29T10:55:29.500 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-11-29T10:55:29.503 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Milkyway |Price: 1.5  |Inventory count: 9
+2018-11-29T11:00:39.653 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-11-29T11:00:39.694 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Sunchips |Price: 1.40  |Inventory count: 9
+2018-11-29T11:04:13.927 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-29T11:04:25.359 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-11-29T11:04:25.362 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Doritos |Price: 1.75  |Inventory count: 6
+2018-11-29T11:04:30.275 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-11-29T11:04:59.894 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-11-29T11:06:18.331 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-29T11:06:18.371 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Sunchips |Price: 1.40  |Inventory count: 8
+2018-11-29T11:06:21.534 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-11-29T11:06:23.941 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-11-29T11:06:23.945 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Doritos |Price: 1.75  |Inventory count: 4
+2018-11-29T11:06:25.245 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-12-03T12:10:33.005 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-12-03T12:10:46.280 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-12-03T12:10:51.150 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-12-03T12:10:51.153 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 10
+2018-12-03T12:11:01.734 : chooseItem: Item successfully dispensed. | user choice: 4
+2018-12-03T12:11:05.795 : chooseItem| Error: OutOfStockException | user choice: 4
+2018-12-03T12:11:41.039 : chooseItem: Item successfully dispensed. | user choice: 3
+2018-12-03T12:11:41.042 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Sunchips |Price: 1.40  |Inventory count: 7
+2018-12-03T12:12:47.262 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-12-03T12:12:52.220 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-12-03T12:13:00.760 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-12-03T12:13:00.763 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 9
+2018-12-03T12:13:03.390 : chooseItem| Error: OutOfStockException | user choice: 4
+2018-12-03T12:13:28.986 : chooseItem: Item successfully dispensed. | user choice: 2
+2018-12-03T12:13:31.934 : chooseItem: Item successfully dispensed. | user choice: 1
+2018-12-03T12:13:31.937 : validateMoney| Error: InsufficientFundsException| user money: $1 Item: Snickers |Price: 1.25  |Inventory count: 9
+2018-12-03T12:13:36.608 : chooseItem| Error: OutOfStockException | user choice: 4

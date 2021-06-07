@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
+  <head>
+      <div th:replace="fragments/headerCoord :: header-css"/>
+    <title>Doggie Rescue</title>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+    <div class="container">
+        <div th:replace="fragments/headerCoord :: header"/>
+      <!-- different main content in different pages-->
+      <div class="container">
+        <div class="row m-4">
+          <div class="col text-center" id="dogdetialAdoptionPage">
+            <h2>Adopt a dog</h2>
+          </div>
+        </div>
+        <!-- <h2 th:text="'Dog Display: ' + ${dog.id}">Dog Display</h2> -->
+        <div class="row">
+          <div class="col-md-2"><p>Name</p></div>
+          <div class="col-md-4">
+            <p id="name" th:text="${dog.name}">name</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Age</p></div>
+          <div class="col-md-4"><p id="age" th:text="${dog.age}">age</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Breed</p></div>
+          <div class="col-md-4">
+            <p id="breed" th:text="${dog.breed.name}">breed</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Size</p></div>
+          <div class="col-md-4">
+            <p id="size" th:text="${dog.size.type}">size</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>trainLevel</p></div>
+          <div class="col-md-4">
+            <p id="trainLevel" th:text="${dog.trainLevel.level}">trainLevel</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>price</p></div>
+          <div class="col-md-4">
+            <p id="price" th:text="${dog.adoptionPrice}">price</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><p>Description</p></div>
+          <div class="col-md-4">
+            <p id="description" th:text="${dog.description}">description</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Adoption Information</h2>
+        <!--div/form for adoption information-->
+        <div id="adoptionDiv">
+          <form
+            id="adoptionForm"
+            type="form"
+            action="addAdoption"
+            method="POST"
+            th:object="${adoption}"
+          >
+            <div class="form-group">
+              <label class="col-4" for="adoptionName">Name</label>
+              <input
+                type="text"
+                class="col-8 form-control"
+                id="adoptionName"
+                name="name"
+              />
+              <div th:if="${adoption} != null and ${#fields.hasErrors('name')}">
+                    <p th:each="error : ${#fields.errors('name')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div>
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="adoptionEmail">Email</label>
+              <input
+                type="text"
+                class="col-8 form-control"
+                id="adoptionEmail"
+                name="email"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.email')}">
+                    <p th:each="error : ${#fields.errors('adoption.email')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="adoptionPhone">Phone</label>
+              <input
+                type="number"
+                class="col-8 form-control"
+                id="adoptionPhone"
+               name="phone"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.phone')}">
+                    <p th:each="error : ${#fields.errors('adoption.phone')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="adoptionStreet1">Street1</label>
+              <input
+                type="textarea"
+                class="col-8 form-control"
+                id="adoptionStreet1"
+               name="street1"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.street1')}">
+                    <p th:each="error : ${#fields.errors('adoption.street1')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="adoptionStreet2">Street2</label>
+              <input
+                type="textarea"
+                class="col-8 form-control"
+                id="adoptionStreet2"
+               name="street2"
+              />
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="adoptionCity">City</label>
+              <input
+                type="textarea"
+                class="col-8 form-control"
+                id="adoptionCity"
+               name= "city"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.city')}">
+                    <p th:each="error : ${#fields.errors('adoption.city')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="zipcode">Zipcode</label>
+              <input
+                type="textarea"
+                class="col-8 form-control"
+                id="zipcode"
+                name="zipcode"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.zipcode')}">
+                    <p th:each="error : ${#fields.errors('adoption.zipcode')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label class="col-4" for="purchasePrice">purchasePrice</label>
+              <input
+                type="textarea"
+                class="col-8 form-control"
+                id="purchasePrice"
+                name="price"
+              />
+              <!-- <div th:if="${contact} != null and ${#fields.hasErrors('adoption.purchaseprice')}">
+                    <p th:each="error : ${#fields.errors('adoption.name')}" 
+                       class="alert alert-danger" th:text="${error}"> Bad name </p>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <label>State: </label>
+              <select name="stateId" class="form-control" id="stateSelect">
+                <option
+                  th:each="state : ${states}"
+                  th:value="${state.id}"
+                  th:text="${state.name}"
+                >
+                  State
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Payment Type: </label>
+              <select
+                name="paymentTypeId"
+                class="form-control"
+                id="paymentTypeSelect"
+              >
+                <option
+                  th:each="paymentType : ${paymentTypes}"
+                  th:value="${paymentType.id}"
+                  th:text="${paymentType.type}"
+                >
+                  paymentType
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+                    <label>User </label>
+                        <select
+                        name="userId"
+                        class="form-control"
+                        id="userSelect"
+                      >
+                        <option
+                          th:each="user : ${users}"
+                          th:value="${user.id}"
+                          th:text="${user.email}"
+                        >
+                          User
+                        </option>
+                      </select>
+                </div>
+            <input type="hidden" name="dogId" th:value="${dog.id}" />
+            <a href="/adoption"><button type="button" id="deleteButton" class="btn btn-success mx-auto">Cancel</button></a>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!--different main content end-->
+    </div>
+
+    <!-- End main body -->
+    <div th:replace="fragments/footer :: footer"/>
+  
+  </body>
+</html>

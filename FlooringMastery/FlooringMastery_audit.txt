@@ -1,0 +1,36 @@
+2018-12-07T15:40:43.857 : Order removed
+2018-12-08T11:08:12.865 : Order number 27 is added to the order list.
+2018-12-08T11:08:51.858 : Order number 10 information is edited.|Order number: 10| customer name: edit info| state: IN| product type: Laminate| area: 21
+2018-12-08T11:09:44.712 : Order number 11 information is edited.|Order number: 11| customer name: edit audit test| state: IN| product type: Carpet| area: 2
+2018-12-08T11:48:55.819 : addOrder: Order number: 34| customer name: after aop logging test| state: PA| product type: Carpet| area: 23y
+2018-12-09T09:52:40.485 : addOrder: Order number: 46| customer name: adding sunday| state: PA| product type: Tile| area: 23y
+2018-12-09T09:53:22.294 : removeOrder: Order number: 11| customer name: edit audit test| state: IN| product type: Carpet| area: 2y
+2018-12-09T09:56:16.912 : addOrder: Order number: 54| customer name: testing auditformat| state: IN| product type: Carpet| area: 19
+2018-12-09T09:56:29.086 : addOrder: Order number: 55| customer name: againnnn| state: OH| product type: Wood| area: 22
+2018-12-09T09:56:52.919 : addOrder: Order number: 56| customer name: helloworld| state: IN| product type: Laminate| area: 81
+2018-12-09T09:58:31.872 : editOrder: Order number: 55| customer name: editing| state: IN| product type: Laminate| area: 22
+2018-12-09T10:01:05.595 : addOrder: Order number: 111| customer name: | state: PA| product type: Tile| area: 2
+2018-12-09T10:01:58.640 : editOrder: Order number: 54| customer name: testing auditformat| state: IN| product type: Carpet| area: 19
+2018-12-09T10:07:47.723 : editOrder: Order number: 54| customer name: testing auditformat| state: IN| product type: Carpet| area: 19
+2018-12-09T10:16:17.429 : addOrder: Order number: 71| customer name: train| state: MI| product type: Wood| area: 2
+2018-12-09T10:20:56.931 : addOrder: Order number: 71| customer name: | state: PA| product type: Tile| area: 2
+2018-12-09T10:27:14.225 : addOrder: Order number: 71| customer name: maybe| state: PA| product type: Tile| area: 13
+2018-12-09T10:28:34.017 : removeOrder: Order number: 46| customer name: adding sunday| state: PA| product type: Tile| area: 23
+2018-12-09T10:47:22.544 : addOrder: Order number: 106| customer name: dec3| state: PA| product type: Tile| area: 2
+2018-12-09T10:58:12.305 : removeOrder: Order number: 54| customer name: testing auditformat| state: IN| product type: Carpet| area: 19
+2018-12-09T11:02:11.369 : removeOrder: Order number: 54| customer name: testing auditformat| state: IN| product type: Carpet| area: 19
+2018-12-09T11:02:43.348 : addOrder: Order number: 138| customer name: dag| state: MI| product type: Laminate| area: 11
+2018-12-09T11:08:38.943 : addOrder: Order number: 118| customer name: dagd| state: MI| product type: Laminate| area: 4
+2018-12-09T15:31:09.041 : addOrder: Order number: 118| customer name: dabgs| state: MI| product type: Laminate| area: 11
+2018-12-09T15:58:43.855 : addOrder: Order number: 137| customer name: training| state: PA| product type: Tile| area: 14
+2018-12-09T15:59:19.879 : addOrder: Order number: 137| customer name: prodmode| state: PA| product type: Tile| area: 19
+2018-12-09T20:11:20.976 : editOrder: Order number: 55| customer name: meh| state: IN| product type: Laminate| area: 22
+2018-12-10T11:04:47.182 : addOrder: Order number: 153| customer name: monday| state: PA| product type: Tile| area: 11
+2018-12-10T11:23:58.661 : editOrder: Order number: 55| customer name: edit log| state: IN| product type: Wood| area: 22
+2018-12-10T12:25:31.201 : addOrder: Order number: 168| customer name: wooo| state: IN| product type: Carpet| area: 22
+2018-12-11T10:35:58.105 : addOrder: Order number: 221| customer name: codereview| state: OH| product type: Carpet| area: 10
+2018-12-11T10:48:18.488 : addOrder: Order number: 237| customer name: again| state: PA| product type: Laminate| area: 16
+2018-12-11T10:58:25.285 : editOrder: Order number: 237| customer name: editing| state: OH| product type: Wood| area: 20
+2018-12-11T11:00:37.259 : editOrder: Order number: 237| customer name: editing| state: OH| product type: Wood| area: 20
+2018-12-11T11:04:05.045 : editOrder: Order number: 237| customer name: nameee| state: MI| product type: Laminate| area: 20
+2018-12-11T11:09:21.677 : removeOrder: Order number: 71| customer name: maybe| state: PA| product type: Tile| area: 13
